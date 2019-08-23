@@ -126,7 +126,7 @@ namespace Easy_Mid.Champions
             E = new Spell(SpellSlot.E, 450);
             R = new Spell(SpellSlot.R, 825);
 
-            Q.SetSkillshot(0.25f, 150f, 1400f, false, SkillshotType.Circle);
+            Q.SetSkillshot(0.25f, 150f, 1400f, false, true, SkillshotType.Circle);
 
             CreateMenu();
             Game.OnUpdate += OnUpdate;
