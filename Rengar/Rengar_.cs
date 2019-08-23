@@ -23,7 +23,7 @@ namespace Rengar
             W = new Spell(SpellSlot.W, 450f);
             E = new Spell(SpellSlot.E, 1000f);
 
-            E.SetSkillshot(0.25f, 70f, 1500f, true, SkillshotType.Line);
+            E.SetSkillshot(0.25f, 70f, 1500f, true, false, SkillshotType.Line);
 
             var Rmenu = new Menu("rengar.port", "Rengar", true);
 
