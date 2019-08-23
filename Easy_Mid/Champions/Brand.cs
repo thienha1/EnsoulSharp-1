@@ -62,8 +62,8 @@ namespace Easy_Mid.Champions
             e = new Spell(SpellSlot.E, 625);
             r = new Spell(SpellSlot.R, 750);
 
-            q.SetSkillshot(0.25f, 60, 1550, true, SkillshotType.Line);
-            w.SetSkillshot(1, 250, float.MaxValue, false, SkillshotType.Circle);
+            q.SetSkillshot(0.25f, 60, 1550, true, true, SkillshotType.Line);
+            w.SetSkillshot(1, 250, float.MaxValue, false, true, SkillshotType.Circle);
             e.SetTargetted(0.25f, float.MaxValue);
             r.SetTargetted(0.25f, 1000);
 
