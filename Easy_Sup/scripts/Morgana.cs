@@ -65,10 +65,10 @@ namespace Easy_Sup.scripts
             if (Me.CharacterName != "Morgana")
                 return;
             _q = new Spell(SpellSlot.Q, 1175f);
-            _q.SetSkillshot(0.25f, 72f, 1200f, true, SkillshotType.Line);
+            _q.SetSkillshot(0.25f, 72f, 1200f, true, true, SkillshotType.Line);
 
             _w = new Spell(SpellSlot.W, 900f);
-            _w.SetSkillshot(0.50f, 225f, 2200f, false, SkillshotType.Circle);
+            _w.SetSkillshot(0.50f, 225f, 2200f, false, true, SkillshotType.Circle);
 
             _e = new Spell(SpellSlot.E, 750f);
             _r = new Spell(SpellSlot.R, 600f);
