@@ -26,9 +26,9 @@ namespace Easy_Sup
             E = new Spell(SpellSlot.E, 925);
             R = new Spell(SpellSlot.R);
 
-            Q.SetSkillshot(0.283f, 210, 1100, false, SkillshotType.Circle);
+            Q.SetSkillshot(0.283f, 210, 1100, false, true, SkillshotType.Circle);
             W.SetTargetted(0.4f, 210);
-            E.SetSkillshot(0.4f, 70f, 1750, false, SkillshotType.Circle);
+            E.SetSkillshot(0.4f, 70f, 1750, false, true, SkillshotType.Circle);
 
             LoadMenu();
             Game.OnUpdate += OnTick;
