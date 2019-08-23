@@ -55,9 +55,9 @@ namespace KDA_Akali
             _e = new Spell(SpellSlot.E, 650f);
             _e2 = new Spell(SpellSlot.E, 2000f);
             _r = new Spell(SpellSlot.R, 575f);
-            _q.SetSkillshot(0.25f, 70f, 1200f, false, SkillshotType.Cone);
-            _e.SetSkillshot(0.25f, 70f, 1200f, true, SkillshotType.Line);
-            _r.SetSkillshot(0.25f, 0f, float.MaxValue, false, SkillshotType.Line);
+            _q.SetSkillshot(0.25f, 70f, 1200f, false, true, SkillshotType.Cone);
+            _e.SetSkillshot(0.25f, 70f, 1200f, true, false SkillshotType.Line);
+            _r.SetSkillshot(0.25f, 0f, float.MaxValue, false, false, SkillshotType.Line);
 
             if(skin.Enabled)
                 ObjectManager.Player.SetSkin(9);
