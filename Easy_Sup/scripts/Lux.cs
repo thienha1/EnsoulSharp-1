@@ -30,10 +30,10 @@ namespace Easy_Sup.scripts
             E = new Spell(SpellSlot.E, 1100);
             R = new Spell(SpellSlot.R, 3340);
 
-            Q.SetSkillshot(0.5f, 80, 1200, false, true, SkillshotType.Line);
-            W.SetSkillshot(0.5f, 150, 1200, false, true SkillshotType.Line);
-            E.SetSkillshot(0.5f, 275, 1300, false, true, SkillshotType.Circle);
-            R.SetSkillshot(1.75f, 190, 3000, false, true, SkillshotType.Line);
+            Q.SetSkillshot(0.5f, 80, 1200, false, false, SkillshotType.Line);
+            W.SetSkillshot(0.5f, 150, 1200, false, false SkillshotType.Line);
+            E.SetSkillshot(0.5f, 275, 1300, false, false, SkillshotType.Circle);
+            R.SetSkillshot(1.75f, 190, 3000, false, false, SkillshotType.Line);
 
 
             CreateMenu();
