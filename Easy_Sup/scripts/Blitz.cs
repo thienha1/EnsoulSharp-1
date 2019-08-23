@@ -28,7 +28,7 @@ namespace Easy_Sup.scripts
                 return;
 
             _q = new Spell(SpellSlot.Q, 950f);
-            _q.SetSkillshot(0.25f, 70f, 1800f, true, SkillshotType.Line);
+            _q.SetSkillshot(0.25f, 70f, 1800f, true, false, SkillshotType.Line);
 
             _e = new Spell(SpellSlot.E, 150f);
             _r = new Spell(SpellSlot.R, 550f);
