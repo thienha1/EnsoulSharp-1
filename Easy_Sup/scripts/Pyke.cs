@@ -20,10 +20,10 @@ namespace Easy_Sup.scripts
         public static void On_Load()
         {
             Q = new Spell(SpellSlot.Q, 400f);
-            Q.SetSkillshot(0.25f, 70f, 2000, true, true, SkillshotType.Line);
+            Q.SetSkillshot(0.25f, 70f, 2000, true, false, SkillshotType.Line);
             Q.SetCharged("PykeQ", "PykeQ", 400, 1030, 1.0f);
             E = new Spell(SpellSlot.E, 550f);
-            E.SetSkillshot(0.275f, 70f, 500f, false, true, SkillshotType.Line);
+            E.SetSkillshot(0.275f, 70f, 500f, true, false, SkillshotType.Line);
             R = new Spell(SpellSlot.R, 750f);
             R.SetSkillshot(0.25f, 100f, float.MaxValue, false, true, SkillshotType.Circle);
 
