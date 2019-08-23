@@ -33,8 +33,8 @@ namespace Easy_Sup.scripts
             R = new Spell(SpellSlot.R, 450);
 
      
-            Q.SetSkillshot(0.500f, 70, 1900f, true, true, SkillshotType.Line);
-            Q2.SetSkillshot(0.500f, 70, 1900f, true, true, SkillshotType.Line);
+            Q.SetSkillshot(0.500f, 70, 1900f, true, false, SkillshotType.Line);
+            Q2.SetSkillshot(0.500f, 70, 1900f, true, false, SkillshotType.Line);
             QRectangle = new EnsoulSharp.SDK.Geometry.Rectangle(ObjectManager.Player.Position, Vector3.Zero, Q.Width);
             var IsMenu = new Menu("Easy_Sup.Thresh", "Easy_Sup.Thresh", true);
             var combo = new Menu("Combo", "Combo Config");
