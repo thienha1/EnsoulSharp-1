@@ -25,7 +25,7 @@ namespace Easy_Sup.scripts
             E = new Spell(SpellSlot.E, 550f);
             E.SetSkillshot(0.275f, 70f, 500f, false, false, SkillshotType.Line);
             R = new Spell(SpellSlot.R, 750f);
-            R.SetSkillshot(0.25f, 100f, float.MaxValue, true, false, SkillshotType.Circle);
+            R.SetSkillshot(0.25f, 100f, float.MaxValue, false, false, SkillshotType.Circle);
 
             CreateMenu();
             Game.OnTick += OnTick;
