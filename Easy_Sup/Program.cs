@@ -1,6 +1,7 @@
 ﻿using Easy_Sup.scripts;
 using EnsoulSharp;
 using EnsoulSharp.SDK;
+using EnsoulSharp.SDK.MenuUI;
 using EnsoulSharp.SDK.Utility;
 using SharpDX;
 using System;
@@ -41,15 +42,16 @@ namespace Easy_Sup
 
         private static Render.Sprite logo;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            GameEvent.OnGameLoad += On_LoadGame;
+ 
+                    GameEvent.OnGameLoad += OnGameLoad;
+            
         }
-        private static void On_LoadGame()
-        {
-            try { Update.Check(); }
-            catch { }
-            Chat.Print("Supported Champions: Alistar, Blitz, Lux, Morgana, Pyke, Soraka, Thresh");
+
+       private static void OnGameLoad()
+{
+ 	Chat.Print("Supported Champions: Alistar, Blitz, Lux, Morgana, Pyke, Soraka, Thresh");
             Chat.Print("SPrediction Port By Mask");
             if (ObjectManager.Player.CharacterName == "Soraka")
             {
@@ -85,9 +87,10 @@ namespace Easy_Sup
             {
                 Morgana.OnLoad();
                 Chat.Print("Morgana Script Load");
-                Chat.Print("This script is a Port of Kurisu Morgana (Code of Kurisu)");
+                Chat.Print("This script is Fixed By Memory");
+                Notifications.Add(new Notification("Easy Support Fixed By Memory", "Credit  Memory"));
             }
         }
-
-    }
 }
+}
+      

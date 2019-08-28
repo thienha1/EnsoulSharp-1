@@ -32,7 +32,7 @@ namespace Easy_Sup.scripts
             E = new Spell(SpellSlot.E, 400);
             R = new Spell(SpellSlot.R, 450);
 
-     
+
             Q.SetSkillshot(0.500f, 70, 1900f, true, false, SkillshotType.Line);
             Q2.SetSkillshot(0.500f, 70, 1900f, true, false, SkillshotType.Line);
             QRectangle = new EnsoulSharp.SDK.Geometry.Rectangle(ObjectManager.Player.Position, Vector3.Zero, Q.Width);

@@ -13,8 +13,9 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <PreBuildEvent />
-    <PostBuildEvent />
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2018.2</PostBuildEvent>
     <OutputPath>bin\Release</OutputPath>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -35,15 +36,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EnsoulSharp.SDK">
-      <HintPath>C:\Users\T-Gamer\Desktop\Server\LOLAC-cleaned\EnsoulSharp.Dependencies-master\System\EnsoulSharp.SDK.dll</HintPath>
+      <HintPath>C:\Users\zi\Downloads\ensoul\EnsoulSharp\System\EnsoulSharp.SDK.dll</HintPath>
     </Reference>
     <Reference Include="EnsoulSharp.Wrapper">
-      <HintPath>C:\Users\T-Gamer\Desktop\Server\LOLAC-cleaned\EnsoulSharp.Dependencies-master\System\EnsoulSharp.Wrapper.dll</HintPath>
+      <HintPath>C:\Users\zi\Downloads\ensoul\EnsoulSharp\System\EnsoulSharp.Wrapper.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
-      <HintPath>C:\Users\T-Gamer\Desktop\Server\LOLAC-cleaned\EnsoulSharp.Dependencies-master\System\SharpDX.dll</HintPath>
+      <HintPath>C:\Users\zi\Downloads\ensoul\EnsoulSharp\System\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,7 +90,6 @@
     <Compile Include="SPrediction\StasisPrediction.cs" />
     <Compile Include="SPrediction\Utility.cs" />
     <Compile Include="SPrediction\VectorPrediction.cs" />
-    <Compile Include="Update.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
