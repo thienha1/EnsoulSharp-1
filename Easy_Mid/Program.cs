@@ -1,33 +1,38 @@
-﻿using Easy_Mid.Champions;
+﻿using EasyMid.Champions;
 using EnsoulSharp;
 using EnsoulSharp.SDK;
+using EnsoulSharp.SDK.MenuUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Easy_Mid
+namespace EasyMid
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            GameEvent.OnGameLoad += On_LoadGame;
+          
+                    GameEvent.OnGameLoad += On_LoadGame;
+             
         }
-        private static void On_LoadGame()
-        {
-            try { Update.Check(); }
-            catch { }
-            if (ObjectManager.Player.CharacterName == "Brand")
-            {
-                Brand.OnLoad();
-            }
-            if (ObjectManager.Player.CharacterName == "Diana")
-            {
-                Diana.OnLoad();
-                Chat.Print("This script is a Port of ElDiana (Code of jQuery)");
-            }
-        }
+
+private static void On_LoadGame()
+{
+    if (ObjectManager.Player.CharacterName == "Brand")
+    {
+        Brand.OnLoad();
     }
+    if (ObjectManager.Player.CharacterName == "Diana")
+    {
+        Diana.OnLoad();
+        Chat.Print("Easy Mid Fixed By Memory");
+        Notifications.Add(new Notification("Easy Mid Fixed By Memory", "Credit  Memory"));
+    }
+        }
+ 
+    }
+
 }
