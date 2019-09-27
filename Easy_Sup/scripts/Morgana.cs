@@ -348,7 +348,7 @@ namespace Easy_Sup.scripts
                 if (detectRange.Distance(ally.Position) > ally.AttackRange - ally.BoundingRadius)
                     continue;
 
-                foreach (var lib in KurisuLib.CCList.Where(x => x.HeroName == attacker.CharacterName && x.Slot == attacker.GetSpellSlot(args.SData.Name)))
+                foreach (var lib in KurisuLib.CCList.Where(x => x.HeroName == attacker.CharacterName && x.Slot == attacker.GetSpellSlot(args.SData.Name) && attacker.HasBuff(x.Buffs))
                 {
                     if (lib.Type == Skilltype.Unit && args.Target.NetworkId != ally.NetworkId)
                         return;
