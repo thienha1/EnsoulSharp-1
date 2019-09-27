@@ -26,6 +26,7 @@ namespace Easy_Sup.Resources
         public float Radius { get; set; }
         public int Delay { get; set; }
         public string SDataName { get; set; }
+        public string Buffs { get; set; }
         public int DangerLevel { get; set; }
 
         public static List<KurisuLib> GDList = new List<KurisuLib>(); // Generic Dangerous List
@@ -37,21 +38,39 @@ namespace Easy_Sup.Resources
             CCList.Add(
                 new KurisuLib
                 {
-                    HeroName = "Aatorx",
-                    SpellMenuName = "Dark Flight",
+                    HeroName = "Aatrox",
+                    SpellMenuName = "The Darkin Blade",
+                    Slot = SpellSlot.Q,
+                    Type = Skilltype.Line,
+                    SDataName = "AatroxQ",
+                    DangerLevel = 5
+                });
+            new KurisuLib
+                {
+                    HeroName = "Aatrox",
+                    SpellMenuName = "The Darkin Blade",
+                    Slot = SpellSlot.Q,
+                    Type = Skilltype.Cone,
+                    SDataName = "AatroxQ2",
+                    DangerLevel = 5
+                });
+            new KurisuLib
+                {
+                    HeroName = "Aatrox",
+                    SpellMenuName = "The Darkin Blade",
                     Slot = SpellSlot.Q,
                     Type = Skilltype.Circle,
-                    SDataName = "AatroxQ",
+                    SDataName = "AatroxQ3",
                     DangerLevel = 5
                 });
             CCList.Add(
                 new KurisuLib
                 {
-                    HeroName = "Aatorx",
-                    SpellMenuName = "Blades of Torment",
-                    Slot = SpellSlot.E,
-                    Type = Skilltype.Cone,
-                    SDataName = "AatroxE",
+                    HeroName = "Aatrox",
+                    SpellMenuName = "Infernal Chains",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Line,
+                    SDataName = "AatroxW",
                     DangerLevel = 3
                 });
             CCList.Add(
@@ -82,6 +101,17 @@ namespace Easy_Sup.Resources
                     Slot = SpellSlot.W,
                     Type = Skilltype.Unit,
                     SDataName = "Headbutt",
+                    DangerLevel = 3
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Alistar",
+                    SpellMenuName = "Trample",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Unit,
+                    SDataName = "AlistarE",
+                    Buffs = "alistareattack",
                     DangerLevel = 3
                 });
             CCList.Add(
@@ -167,6 +197,27 @@ namespace Easy_Sup.Resources
             CCList.Add(
                 new KurisuLib
                 {
+                    HeroName = "Aurelion Sol",
+                    SpellMenuName = "Starsurge",
+                    Slot = SpellSlot.Q,
+                    Type = Skilltype.Circle,
+                    SDataName = "AurelionSolQ",
+                    Buffs = "aurelionsolqhaste",
+                    DangerLevel = 5
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Aurelion Sol",
+                    SpellMenuName = "Voice of Light",
+                    Slot = SpellSlot.R,
+                    Type = Skilltype.Line,
+                    SDataName = "AurelionSolR",
+                    DangerLevel = 5
+                });
+            CCList.Add(
+                new KurisuLib
+                {
                     HeroName = "Bard",
                     SpellMenuName = "Cosmic Binding",
                     Slot = SpellSlot.Q,
@@ -222,6 +273,26 @@ namespace Easy_Sup.Resources
                     Type = Skilltype.Line,
                     SDataName = "BraumR",
                     DangerLevel = 5
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Camille",
+                    SpellMenuName = "Tactical Sweep",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Cone,
+                    SDataName = "CamilleW",
+                    DangerLevel = 3
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Camille",
+                    SpellMenuName = "Wall Dive",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Line,
+                    SDataName = "CamilleEDash2",
+                    DangerLevel = 3
                 });
             CCList.Add(
                 new KurisuLib
@@ -319,11 +390,11 @@ namespace Easy_Sup.Resources
                 new KurisuLib
                 {
                     HeroName = "Evelynn",
-                    SpellMenuName = "Agony's Embrace",
-                    Slot = SpellSlot.R,
-                    Type = Skilltype.Circle,
+                    SpellMenuName = "Allure",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Unit,
                     DangerLevel = 5,
-                    SDataName = "EvelynnR",
+                    SDataName = "EvelynnW",
                 });
             CCList.Add(
                 new KurisuLib
@@ -355,26 +426,45 @@ namespace Easy_Sup.Resources
                 DangerLevel = 5,
                 SDataName = "Terrify"
             });
+            CCList.Add(new KurisuLib
+            {
+                HeroName = "Fiora",
+                SpellMenuName = "Riposte",
+                Slot = SpellSlot.W,
+                Type = Skilltype.Line,
+                DangerLevel = 5,
+                SDataName = "FioraW"
+            });
 
             CCList.Add(
                 new KurisuLib
                 {
                     HeroName = "Galio",
-                    SpellMenuName = "Resolute Smite",
-                    Slot = SpellSlot.Q,
+                    SpellMenuName = "Shield of Durand",
+                    Slot = SpellSlot.W,
                     Type = Skilltype.Circle,
                     DangerLevel = 2,
-                    SDataName = "GalioResoluteSmite",
+                    SDataName = "GalioW",
                 });
             CCList.Add(
                 new KurisuLib
                 {
                     HeroName = "Galio",
-                    SpellMenuName = "Idol Of Durand",
+                    SpellMenuName = "Justice Punch",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Line,
+                    DangerLevel = 5,
+                    SDataName = "GalioE",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Galio",
+                    SpellMenuName = "Hero's Entrance",
                     Slot = SpellSlot.R,
                     Type = Skilltype.Circle,
                     DangerLevel = 5,
-                    SDataName = "GalioIdolOfDurand",
+                    SDataName = "GalioR",
                 });
             CCList.Add(
                 new KurisuLib
@@ -480,6 +570,56 @@ namespace Easy_Sup.Resources
                       SDataName = "HecarimRamp",
                   });
             CCList.Add(
+                  new KurisuLib
+                  {
+                      HeroName = "Illaoi",
+                      SpellMenuName = "Test of Spirit",
+                      Slot = SpellSlot.E,
+                      Type = Skilltype.Line,
+                      DangerLevel = 3,
+                      SDataName = "IllaoiE",
+                  });
+            CCList.Add(
+                  new KurisuLib
+                  {
+                      HeroName = "Irelia",
+                      SpellMenuName = "Flawless Duet",
+                      Slot = SpellSlot.E,
+                      Type = Skilltype.Line,
+                      DangerLevel = 5,
+                      SDataName = "IreliaE2",
+                  });
+            CCList.Add(
+                  new KurisuLib
+                  {
+                      HeroName = "Irelia",
+                      SpellMenuName = "Vanguard's Edge",
+                      Slot = SpellSlot.R,
+                      Type = Skilltype.Cone,
+                      DangerLevel = 4,
+                      SDataName = "IreliaR",
+                  });
+            CCList.Add(
+                  new KurisuLib
+                  {
+                      HeroName = "Ivern",
+                      SpellMenuName = "Rootcaller",
+                      Slot = SpellSlot.Q,
+                      Type = Skilltype.Line,
+                      DangerLevel = 4,
+                      SDataName = "IvernQ",
+                  });
+            CCList.Add(
+                  new KurisuLib
+                  {
+                      HeroName = "Ivern",
+                      SpellMenuName = "Triggerseed",
+                      Slot = SpellSlot.E,
+                      Type = Skilltype.Unit,
+                      DangerLevel = 4,
+                      SDataName = "IvernE",
+                  });
+            CCList.Add(
                 new KurisuLib
                 {
                     HeroName = "Janna",
@@ -532,6 +672,27 @@ namespace Easy_Sup.Resources
             CCList.Add(
                 new KurisuLib
                 {
+                    HeroName = "Jhin",
+                    SpellMenuName = "Deadly Flourish",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Line,
+                    DangerLevel = 4,
+                    SDataName = "JhinW",
+                    Buffs = "jhinpassivehaste"
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Jhin",
+                    SpellMenuName = "Curtain Call",
+                    Slot = SpellSlot.R,
+                    Type = Skilltype.Line,
+                    DangerLevel = 4,
+                    SDataName = "JhinR",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
                     HeroName = "Jinx",
                     SpellMenuName = "Zap!",
                     Slot = SpellSlot.W,
@@ -558,6 +719,16 @@ namespace Easy_Sup.Resources
                     Type = Skilltype.Circle,
                     DangerLevel = 2,
                     SDataName = "KarmaQMantra",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kayn",
+                    SpellMenuName = "Blade's Reach",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Line,
+                    DangerLevel = 4,
+                    SDataName = "KaynW",
                 });
             CCList.Add(
                  new KurisuLib
@@ -599,7 +770,77 @@ namespace Easy_Sup.Resources
                     Slot = SpellSlot.Q,
                     Type = Skilltype.Unit,
                     DangerLevel = 3,
-                    SDataName = "JudicatorReckoning",
+                    SDataName = "KayleQ",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kennen",
+                    SpellMenuName = "Lightning Rush",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Unit,
+                    DangerLevel = 3,
+                    SDataName = "KennenLightningRush",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kennen",
+                    SpellMenuName = "Thundering Shuriken",
+                    Slot = SpellSlot.Q,
+                    Type = Skilltype.Unit,
+                    DangerLevel = 3,
+                    SDataName = "KennenShurikenHurlMissile1",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kennen",
+                    SpellMenuName = "Electrical Surge",
+                    Slot = SpellSlot.W,
+                    Type = Skilltype.Unit,
+                    DangerLevel = 3,
+                    SDataName = "KennenBringTheLight",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kennen",
+                    SpellMenuName = "Slicing Maelstrom",
+                    Slot = SpellSlot.R,
+                    Type = Skilltype.Circle,
+                    DangerLevel = 5,
+                    SDataName = "KennenShurikenStorm",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kindred",
+                    SpellMenuName = "Mounting Dread",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Unit,
+                    DangerLevel = 4,
+                    SDataName = "KindredEWrapper",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kled",
+                    SpellMenuName = "Beartrap on a Rope",
+                    Slot = SpellSlot.Q,
+                    Type = Skilltype.Line,
+                    DangerLevel = 4,
+                    SDataName = "KledQ",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Kled",
+                    SpellMenuName = "Chaaaaaaaarge!!!",
+                    Slot = SpellSlot.R,
+                    Type = Skilltype.Unit,
+                    DangerLevel = 4,
+                    SDataName = "KledR",
                 });
             CCList.Add(
                 new KurisuLib
@@ -852,6 +1093,24 @@ namespace Easy_Sup.Resources
             CCList.Add(
                 new KurisuLib
                 {
+                    HeroName = "Neeko",
+                    SpellMenuName = "Tangle-Barbs",
+                    Slot = SpellSlot.E,
+                    DangerLevel = 5,
+                    SDataName = "NeekoE",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Neeko",
+                    SpellMenuName = "Pop Blossom",
+                    Slot = SpellSlot.R,
+                    DangerLevel = 5,
+                    SDataName = "NeekoR",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
                     HeroName = "Karthus",
                     SpellMenuName = "Wall of Pain",
                     Slot = SpellSlot.W,
@@ -919,6 +1178,26 @@ namespace Easy_Sup.Resources
                     Type = Skilltype.Line,
                     DangerLevel = 2,
                     SDataName = "OlafAxeThrowCast",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Ornn",
+                    SpellMenuName = "Searing Charge",
+                    Slot = SpellSlot.E,
+                    Type = Skilltype.Line,
+                    DangerLevel = 4,
+                    SDataName = "OrnnE",
+                });
+            CCList.Add(
+                new KurisuLib
+                {
+                    HeroName = "Ornn",
+                    SpellMenuName = "Call of the Forge God",
+                    Slot = SpellSlot.R,
+                    Type = Skilltype.Line,
+                    DangerLevel = 5,
+                    SDataName = "OrnnR",
                 });
             CCList.Add(
                 new KurisuLib
@@ -1135,21 +1414,52 @@ namespace Easy_Sup.Resources
                 new KurisuLib
                 {
                     HeroName = "Pantheon",
-                    SpellMenuName = "Aegis of Zeonia",
+                    SpellMenuName = "Shield Vault",
                     Slot = SpellSlot.W,
-                    DangerLevel = 3,
+                    DangerLevel = 4,
                     SDataName = "PantheonW",
                 });
             CCList.Add(
                  new KurisuLib
                  {
-                     HeroName = "Pantheon",
-                     SpellMenuName = "Aegis of Zeonia",
-                     Slot = SpellSlot.W,
-                     Type = Skilltype.Unit,
-                     DangerLevel = 3,
-                     SDataName = "PantheonW",
+                     HeroName = "Pyke",
+                     SpellMenuName = "Bone Skewer",
+                     Slot = SpellSlot.Q,
+                     Type = Skilltype.Line,
+                     DangerLevel = 4,
+                     SDataName = "PykeQ",
                  });
+            CCList.Add(
+                 new KurisuLib
+                 {
+                     HeroName = "Pyke",
+                     SpellMenuName = "Phantom Undertow",
+                     Slot = SpellSlot.E,
+                     Type = Skilltype.Line,
+                     DangerLevel = 5,
+                     SDataName = "PykeE",
+                 });
+            CCList.Add(
+                 new KurisuLib
+                 {
+                     HeroName = "Qiyana",
+                     SpellMenuName = "Edge of Ixtal",
+                     Slot = SpellSlot.Q,
+                     Type = Skilltype.Line,
+                     DangerLevel = 5,
+                     SDataName = "QiyanaQ_Water",
+                 });
+            CCList.Add(
+                 new KurisuLib
+                 {
+                     HeroName = "Qiyana",
+                     SpellMenuName = "Supreme Display of Talent",
+                     Slot = SpellSlot.R,
+                     Type = Skilltype.Unknown,
+                     DangerLevel = 5,
+                     SDataName = "QiyanaR",
+                 });
+            
             CCList.Add(
                  new KurisuLib
                  {
@@ -1552,7 +1862,7 @@ namespace Easy_Sup.Resources
                     SpellMenuName = "Steel Tempest (3)",
                     Slot = SpellSlot.Q,
                     DangerLevel = 3,
-                    SDataName = "YasuoQ3",
+                    SDataName = "YasuoQ3Wrapper",
                 });
             #endregion
 
